@@ -16,7 +16,7 @@ const sidebarList = [
 const Sidebar = () => {
   return (
     <>
-      <div className="flex flex-col gap-12 text-3xl h-full w-72 p-12 ">
+      <div className="hidden md:flex-col md:gap-12 md:text-3xl md:h-full md:w-72 md:p-12 ">
         <div>
           <img src={profile} alt="pic" className="mb-4 rounded-lg" />
           <div className="flex flex-col ">

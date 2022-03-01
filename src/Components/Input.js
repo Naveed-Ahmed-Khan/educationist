@@ -6,8 +6,8 @@ const Input = (props) => {
       className={` 
       ${props.width === "full" && "w-full"}
       ${props.width === "half" && "w-1/2"}
-      bg-slate-200 rounded-sm 
-      px-16 py-3 outline-none`}
+      bg-slate-200 rounded-sm px-6 py-4
+      md:px-16 md:py-3 outline-none`}
       placeholder={props.label}
       name={props.name}
     />
