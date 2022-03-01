@@ -17,7 +17,10 @@ const sidebarList = [
 const Sidebar = (props) => {
   return (
     <>
-      <div className="flex flex-col gap-6 p-4 z-10 max-w-xs md:flex-col md:gap-12 md:text-3xl md:h-full md:w-72 md:p-12">
+      <div
+        className="fixed flex flex-col gap-6 p-4 z-10 max-w-xs bg-green-500
+                  md:relative md:flex-col md:gap-12 md:text-3xl md:h-full md:w-72 md:p-12"
+      >
         <div className="flex flex-col gap-2">
           <img
             onClick={() => {
