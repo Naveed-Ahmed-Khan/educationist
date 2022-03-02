@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import parentRoutes from './routes/parentRoutes.js';
 import tutorRoutes from './routes/tutorRoutes.js';
+import jobRoutes from './routes/jobRoutes.js';
 
 const app = express();
 app.use(bodyParser.json({limit: "30mb", extended: true}));
@@ -13,6 +14,7 @@ app.use(cors());
 // routes
 app.use('/addParents', parentRoutes);
 app.use('/addTutor', tutorRoutes);
+app.use('/addJob', jobRoutes);
 
 //port
 const PORT = 5000;
