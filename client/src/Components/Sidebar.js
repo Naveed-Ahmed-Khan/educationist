@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const sidebarList = [
   { name: "Add Parents", route: "/" },
+  { name: "Add Tutor", route: "/add-tutor" },
   { name: "Add Job", route: "/add-tutor" },
   { name: "All Tutors", route: "/add-tutor" },
   { name: "All Jobs", route: "/add-tutor" },
@@ -36,7 +37,7 @@ const Sidebar = (props) => {
             className="md:hidden object-contain h-8 cursor-pointer ml-auto "
           />
           <div className="flex items-center justify-start gap-4">
-            <img src={profile} alt="pic" className="rounded-lg" />
+            <img src={profile} alt="pic" className="rounded-xl " />
             <h2 className="text-2xl text-white">Asif Public School</h2>
           </div>
           <p className="text-base text-slate-200">owner@gmail.com</p>
@@ -63,20 +64,20 @@ const Sidebar = (props) => {
       {/* Desktop Sidebar */}
       <div className="hidden md:flex md:flex-col md:gap-12 md:text-3xl  md:w-72 md:p-12">
         <div className="flex flex-col gap-2">
-          <img src={profile} alt="pic" className="rounded-lg" />
-          <div className="flex flex-col items-center justify-start gap-4">
+          <div className="flex flex-col items-start justify-start gap-4">
+            <img src={profile} alt="pic" className="rounded-xl" />
             <h2 className="text-3xl text-white">Asif Public School</h2>
           </div>
           <p className="text-base text-slate-200">owner@gmail.com</p>
         </div>
-        <ul className="flex flex-col gap-4">
+        <ul className="flex flex-col gap-2">
           {sidebarList.map((item, index) => {
             return (
               <div className="max-w-xs">
                 <Link
                   to={item.route}
                   key={index.toString()}
-                  className="text-xl font-medium text-white mb-2 cursor-pointer "
+                  className="text-xl font-medium text-white mb-4 cursor-pointer "
                 >
                   {item.name}
                 </Link>
