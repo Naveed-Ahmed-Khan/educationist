@@ -6,14 +6,12 @@ import { Link } from "react-router-dom";
 
 const sidebarList = [
   { name: "Add Parents", route: "/" },
-  { name: "Add Tutor", route: "/add-tutor" },
-  /*  "Add Tutor",
-  "Add Job",
-  "All Tutors",
-  "All Jobs",
-  "Jobes Applied",
-  "Jobs Details",
-  "Feedback", */
+  { name: "Add Job", route: "/add-tutor" },
+  { name: "All Tutors", route: "/add-tutor" },
+  { name: "All Jobs", route: "/add-tutor" },
+  { name: "Jobes Applied", route: "/add-tutor" },
+  { name: "Jobs Details", route: "/add-tutor" },
+  { name: "Feedback", route: "/add-tutor" },
 ];
 
 const Sidebar = (props) => {
@@ -21,7 +19,7 @@ const Sidebar = (props) => {
     <>
       {/* Mobile Sidebar */}
       <div
-        className={`md:hidden fixed flex flex-col gap-6 p-4 z-10 max-w-xs bg-green-500
+        className={`md:hidden fixed flex flex-col gap-6 p-4 z-10 max-w-xs min-h-screen bg-green-500
         ${
           props.open === true
             ? "translate-x-0 opacity-100"
@@ -65,8 +63,8 @@ const Sidebar = (props) => {
       {/* Desktop Sidebar */}
       <div className="hidden md:flex md:flex-col md:gap-12 md:text-3xl  md:w-72 md:p-12">
         <div className="flex flex-col gap-2">
+          <img src={profile} alt="pic" className="rounded-lg" />
           <div className="flex flex-col items-center justify-start gap-4">
-            <img src={profile} alt="pic" className="rounded-lg" />
             <h2 className="text-3xl text-white">Asif Public School</h2>
           </div>
           <p className="text-base text-slate-200">owner@gmail.com</p>
