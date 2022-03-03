@@ -8,16 +8,9 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="bg-green-500 z-0 md:p-4">
-        {open ? (
-          <>
-            <Sidebar open={open} setOpen={setOpen} />
-          </>
-        ) : (
-          <>
-            <Navbar open={open} setOpen={setOpen} />
-          </>
-        )}
+      <div className="bg-green-500 z-0 md:min-h-screen md:flex md:p-4">
+        <Sidebar open={open} setOpen={setOpen} />
+        <Navbar open={open} setOpen={setOpen} />
         <Outlet />
       </div>
     </>
