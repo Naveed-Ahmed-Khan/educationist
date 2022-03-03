@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../Components/Card";
 import Input from "../Components/Input";
 import { useFormik } from "formik";
+import { Link } from "react-router-dom";
 
 const AddTutor = () => {
   const formik = useFormik({
@@ -44,14 +45,14 @@ const AddTutor = () => {
           </select>
         </div>
         <Input label="Password" width="full" />
-        <div>
+        <Link to="/tutor-details">
           <button
             type="submit"
             className="flex bg-green-500 text-white rounded-lg mx-auto px-8 py-3 md:px-10 md:py-3 md:ml-auto md:mx-0"
           >
             Next
           </button>
-        </div>
+        </Link>
       </form>
     </Card>
   );
