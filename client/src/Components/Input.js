@@ -7,7 +7,7 @@ const Input = (props) => {
       ${props.width === "full" && "w-full"}
       ${props.width === "half" && "w-1/2"}
       bg-slate-200 rounded-sm px-6 py-4
-      md:px-16 md:py-3 outline-none`}
+      md:pl-14 md:py-4 outline-none`}
       placeholder={props.label}
       name={props.name}
     />
