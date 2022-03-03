@@ -20,7 +20,7 @@ const Search = () => {
 
         <input
           type="text"
-          className="outline-none rounded-md "
+          className="outline-none rounded-md"
           placeholder="Search..."
         />
       </div>
