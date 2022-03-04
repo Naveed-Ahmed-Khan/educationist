@@ -8,7 +8,7 @@ const parentSchema = mongoose.Schema({
     country: { type: String, required: true },
     city: { type: String, required: true },
     password: { type: String, required: true },
-    id: { type: String },
+    id: { type: String }, 
 });
 
 export default mongoose.model("Parents", parentSchema);
