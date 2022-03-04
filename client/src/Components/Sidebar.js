@@ -62,7 +62,7 @@ const Sidebar = (props) => {
       </div>
 
       {/* Desktop Sidebar */}
-      <div className="hidden md:flex md:flex-col md:gap-12 md:text-3xl  md:w-72 md:p-12">
+      <div className="hidden md:flex md:flex-col md:gap-12 md:text-3xl md:h-full md:max-w-72 md:p-12">
         <div className="flex flex-col gap-2">
           <div className="flex flex-col items-start justify-start gap-4">
             <img src={profile} alt="pic" className="rounded-xl" />

@@ -23,7 +23,7 @@ const AddParent = () => {
   });
   return (
     <Card>
-      <h1 className="text-2xl">Add Parent</h1>
+      <h1 className="text-secondary text-2xl">Add Parent</h1>
       <form
         onSubmit={formik.handleSubmit}
         className="flex flex-col flex-wrap gap-4 pt-6 md:px-14 md:gap-6"
