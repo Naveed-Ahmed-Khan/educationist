@@ -1,33 +1,111 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import Card from "../Components/Card";
 import Input from "../Components/Input";
+import { useFormik } from "formik";
 
 const AddParent = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  const dispatch = useDispatch();
+
+  const formik = useFormik({
+    initialValues: {
+      studentName: "",
+      fatherName: "",
+      email: "",
+      watsappNo: "",
+      country: "",
+      city: "",
+      password: "",
+    },
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
   return (
     <Card>
       <h1 className="text-2xl">Add Parent</h1>
       <form
-        onSubmit={handleSubmit}
+        onSubmit={formik.handleSubmit}
         className="flex flex-col flex-wrap gap-4 pt-6 md:px-14 md:gap-6"
       >
-        <Input label="Student Name" width="full" />
+        <Input
+          width="full"
+          type="text"
+          name="studentName"
+          label="Student Name"
+          onChange={formik.handleChange}
+          value={formik.values.studentName}
+        />
         {/* For small screen */}
         <div className="flex flex-col gap-6 md:hidden">
-          <Input label="Father Name" width="full" />
-          <Input label="Email" width="full" />
+          <Input
+            width="full"
+            label="Father Name"
+            name="fatherName"
+            type="text"
+            onChange={formik.handleChange}
+            value={formik.values.fatherName}
+          />
+          <Input
+            type="text"
+            label="Email"
+            name="email"
+            onChange={formik.handleChange}
+            value={formik.values.email}
+            width="full"
+          />
         </div>
         {/* For medium screen and above */}
         <div className="hidden md:flex md:gap-6">
-          <Input label="Father Name" width="half" />
-          <Input label="Email" width="half" />
+          <Input
+            width="half"
+            type="text"
+            label="Father Name"
+            name="fatherName"
+            onChange={formik.handleChange}
+            value={formik.values.fatherName}
+          />
+          <Input
+            width="half"
+            type="text"
+            label="Email"
+            name="email"
+            onChange={formik.handleChange}
+            value={formik.values.email}
+          />
         </div>
-        <Input label="Watsapp No." width="full" />
-        <Input label="Country" width="full" />
-        <Input label="City" width="full" />
-        <Input label="Password" width="full" />
+        <Input
+          width="full"
+          type="number"
+          label="Watsapp No."
+          name="watsappNo"
+          onChange={formik.handleChange}
+          value={formik.values.watsappNo}
+        />
+        <Input
+          width="full"
+          type="text"
+          label="Country"
+          name="country"
+          onChange={formik.handleChange}
+          value={formik.values.country}
+        />
+        <Input
+          width="full"
+          type="text"
+          label="City"
+          name="city"
+          onChange={formik.handleChange}
+          value={formik.values.city}
+        />
+        <Input
+          width="full"
+          type="text"
+          label="Password"
+          name="password"
+          onChange={formik.handleChange}
+          value={formik.values.password}
+        />
         <div>
           <button
             type="submit"

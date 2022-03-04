@@ -10,6 +10,9 @@ const Input = (props) => {
       md:pl-14 md:py-4 outline-none`}
       placeholder={props.label}
       name={props.name}
+      onChange={props.onChange}
+      value={props.value}
+      type={props.type}
     />
   );
 };
