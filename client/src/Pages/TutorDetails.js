@@ -18,6 +18,7 @@ const TutorDetails = () => {
     },
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
+      formik.resetForm();
     },
   });
   return (

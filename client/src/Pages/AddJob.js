@@ -21,6 +21,7 @@ const AddJob = () => {
     },
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
+      formik.resetForm();
     },
   });
   return (
@@ -76,15 +77,6 @@ const AddJob = () => {
           onChange={formik.handleChange}
           value={formik.values.subject}
         />
-        {/* <Input
-          width="full"
-          height="h-40"
-          type="text"
-          name="requirment"
-          label="Describe your requirments"
-          onChange={formik.handleChange}
-          value={formik.values.requirment}
-        /> */}
         <textarea 
             className="
             bg-slate-200 rounded-sm px-6 py-4
@@ -187,12 +179,6 @@ const AddJob = () => {
           >
             Add Parent
           </button>
-          {/* <button
-            type="submit"
-            className="flex bg-green-500 text-white rounded-lg mx-auto  px-8 py-3 md:px-10 md:py-3 md:ml-auto md:mx-0"
-          >
-            Reset
-          </button> */}
         </div>
       </form>
     </Card>
