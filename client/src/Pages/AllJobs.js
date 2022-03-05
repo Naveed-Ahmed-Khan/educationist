@@ -45,6 +45,7 @@ const jobs = [
 const AllJobs = () => {
   const date = new Date();
   const currentDate = `${date.getDate()} / ${date.getMonth()} / ${date.getFullYear()}`;
+  
   return (
     <Card>
       <header className="flex flex-col gap-2 justify-start md:min-h-max ">

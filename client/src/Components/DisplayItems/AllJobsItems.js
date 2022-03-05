@@ -13,9 +13,9 @@ const AllJobsItems = (props) => {
         </div>
         <div className="flex ">
           <div className="flex justify-around gap-2 md:gap-10">
-            <p className="text-primary">View</p>
-            <p className="text-primary">Edit</p>
-            <p className="text-red-500">Delete</p>
+            <p className="text-primary cursor-pointer">View</p>
+            <p className="text-primary cursor-pointer">Edit</p>
+            <p className="text-red-500 cursor-pointer">Delete</p>
           </div>
         </div>
       </div>
