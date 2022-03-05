@@ -3,6 +3,7 @@ import Dashboard from "./Dashboard";
 import AddParent from "./Pages/AddParent";
 import AddTutor from "./Pages/AddTutor";
 import AllJobs from "./Pages/AllJobs";
+import JobsApplied from "./Pages/JobsApplied";
 import TutorDetails from "./Pages/TutorDetails";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/add-tutor" element={<AddTutor />} />
           <Route path="/tutor-details" element={<TutorDetails />} />
           <Route path="/all-jobs" element={<AllJobs />} />
+          <Route path="/jobs-applied" element={<JobsApplied />} />
         </Route>
       </Routes>
     </>

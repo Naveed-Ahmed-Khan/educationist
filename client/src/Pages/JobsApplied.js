@@ -1,54 +1,72 @@
 import React from "react";
 import Card from "../Components/Card";
-import AllJobsItems from "../Components/DisplayItems/AllJobsItems";
+import JobsAppliedItems from "../Components/DisplayItems/JobsAppliedItems";
 import Search from "../Components/Searchbar";
 
-const jobs = [
+const jobsApplied = [
   {
     mode: "Online",
     subjects: "Maths",
     city: "Rawalpindi",
     country: "Pakistan",
+    applicants: "Tauseeq Babar",
+    institutes: "Asif Public School",
+    actions: "Assign Parent",
   },
   {
     mode: "Online",
     subjects: "Maths",
     city: "Rawalpindi",
     country: "Pakistan",
+    applicants: "Tauseeq Babar",
+    institutes: "Asif Public School",
+    actions: "Assign Parent",
   },
   {
     mode: "Online",
     subjects: "Maths",
     city: "Rawalpindi",
     country: "Pakistan",
+    applicants: "Tauseeq Babar",
+    institutes: "Asif Public School",
+    actions: "Assign Parent",
   },
   {
     mode: "Online",
     subjects: "Maths",
     city: "Rawalpindi",
     country: "Pakistan",
+    applicants: "Tauseeq Babar",
+    institutes: "Asif Public School",
+    actions: "Assign Parent",
   },
   {
     mode: "Online",
     subjects: "Maths",
     city: "Rawalpindi",
     country: "Pakistan",
+    applicants: "Tauseeq Babar",
+    institutes: "Asif Public School",
+    actions: "Assign Parent",
   },
   {
     mode: "Online",
     subjects: "Maths",
     city: "Rawalpindi",
     country: "Pakistan",
+    applicants: "Tauseeq Babar",
+    institutes: "Asif Public School",
+    actions: "Assign Parent",
   },
 ];
 
-const AllJobs = () => {
+const JobsApplied = () => {
   const date = new Date();
   const currentDate = `${date.getDate()} / ${date.getMonth()} / ${date.getFullYear()}`;
   return (
     <Card>
       <header className="flex flex-col gap-2 justify-start md:min-h-max ">
-        <h1 className="text-4xl">All Jobs</h1>
+        <h1 className="text-4xl">Jobs Applied</h1>
         <p className="text-gray-400">{currentDate}</p>
         <div className="hidden md:block md:my-8 md:mx-auto md:max-w-1/2">
           <Search />
@@ -58,7 +76,7 @@ const AllJobs = () => {
       {/* Header */}
       <div className="flex flex-col px-0 md:px-10">
         <div className="flex items-center justify-between">
-          <p className="text-lg font-bold text-secondary">All Jobs</p>
+          <p className="text-lg font-bold text-secondary">Jobs Applied</p>
           <svg
             className="fill-gray-400 object-contain h-10 cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
@@ -72,16 +90,25 @@ const AllJobs = () => {
         <hr className="max-w-full" />
         {/* Body */}
         <div
-          className="flex flex-col  gap-8 mt-4 md:max-h-[53vh] xl:max-h-[53vh] 
-        md:overflow-y-auto scroll md:scroll-smooth    "
+          className="flex flex-col gap-5 mt-4 md:max-h-[53vh] xl:max-h-[53vh] 
+          md:overflow-y-auto scroll md:scroll-smooth    "
         >
-          {jobs.map((item, index) => {
+          <header className="grid grid-cols-5 place-items-center gap-x-6">
+            <p className="col-span-2 font-bold text-black">Jobs</p>
+            <p className="col-span-1 font-bold text-black">Applicants</p>
+            <p className="col-span-1 font-bold text-black">Institutes</p>
+            <p className="col-span-1 font-bold text-black">Actions</p>
+          </header>
+          {jobsApplied.map((item, index) => {
             return (
-              <AllJobsItems
+              <JobsAppliedItems
                 mode={item.mode}
                 subject={item.subjects}
                 city={item.city}
                 country={item.country}
+                applicants={item.applicants}
+                institutes={item.institutes}
+                actions={item.actions}
               />
             );
           })}
@@ -91,4 +118,4 @@ const AllJobs = () => {
   );
 };
 
-export default AllJobs;
+export default JobsApplied;
