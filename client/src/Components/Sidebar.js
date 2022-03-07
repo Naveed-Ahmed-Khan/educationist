@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 const sidebarList = [
   { name: "Add Parents", route: "/" },
   { name: "Add Tutor", route: "/add-tutor" },
-  { name: "Add Job", route: "/add-tutor" },
-  { name: "All Tutors", route: "/add-tutor" },
+  { name: "Add Job", route: "/add-job" },
+  { name: "All Tutors", route: "/all-tutors" },
   { name: "All Jobs", route: "/all-jobs" },
   { name: "Jobs Applied", route: "/jobs-applied" },
-  { name: "Jobs Details", route: "/add-tutor" },
-  { name: "Feedback", route: "/add-tutor" },
+  { name: "Jobs Details", route: "/jobs-details" },
+  { name: "Feedback", route: "/feedback" },
 ];
 
 const Sidebar = (props) => {
@@ -77,7 +77,7 @@ const Sidebar = (props) => {
                 <Link
                   to={item.route}
                   key={index.toString()}
-                  className="text-xl font-medium text-white mb-4 cursor-pointer "
+                  className="text-xl font-medium text-white mb-4 cursor-pointer"
                 >
                   {item.name}
                 </Link>
