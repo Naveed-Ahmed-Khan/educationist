@@ -80,7 +80,7 @@ const JobsDetails = () => {
         {/* Body */}
         <div
           className="flex flex-col gap-5 mt-4 md:max-h-[53vh] xl:max-h-[53vh] 
-      md:overflow-y-auto scroll md:scroll-smooth    "
+          md:overflow-y-auto scroll md:scroll-smooth"
         >
           <header className="grid grid-cols-5 place-items-center gap-x-6">
             <p className="col-span-1 font-bold text-xl text-black">
@@ -95,17 +95,19 @@ const JobsDetails = () => {
             </p>
             <p className="col-span-1 font-bold text-xl text-black">Actions</p>
           </header>
-          {jobsApplied.map((item) => {
-            return (
-              <JobsDetailsItems
-                studentName={item.studentName}
-                tutor={item.tutor}
-                pendingFee={item.pendingFee}
-                institutes={item.institutes}
-                actions={item.actions}
-              />
-            );
-          })}
+          <div className="flex flex-col gap-y-6">
+            {jobsApplied.map((item) => {
+              return (
+                <JobsDetailsItems
+                  studentName={item.studentName}
+                  tutor={item.tutor}
+                  pendingFee={item.pendingFee}
+                  institutes={item.institutes}
+                  actions={item.actions}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </Card>

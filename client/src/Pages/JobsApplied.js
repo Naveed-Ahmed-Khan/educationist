@@ -74,7 +74,7 @@ const JobsApplied = () => {
       </header>
       {/* Table */}
       {/* Header */}
-      <div className="flex flex-col px-0 md:px-10">
+      <div className="flex-auto flex flex-col px-0 md:px-10">
         <div className="flex items-center justify-between">
           <p className="text-lg font-bold text-secondary">Jobs Applied</p>
           <svg
@@ -90,7 +90,7 @@ const JobsApplied = () => {
         <hr className="max-w-full" />
         {/* Body */}
         <div
-          className="flex flex-col gap-5 mt-4 md:max-h-[53vh] xl:max-h-[53vh] 
+          className="flex-auto flex flex-col gap-5 mt-4 md:max-h-[53vh] xl:max-h-[53vh] 
           md:overflow-y-auto scroll md:scroll-smooth    "
         >
           <header className="grid grid-cols-5 place-items-center gap-x-6">
@@ -103,19 +103,21 @@ const JobsApplied = () => {
             </p>
             <p className="col-span-1 font-bold text-xl text-black">Actions</p>
           </header>
-          {jobsApplied.map((item, index) => {
-            return (
-              <JobsAppliedItems
-                mode={item.mode}
-                subject={item.subjects}
-                city={item.city}
-                country={item.country}
-                applicants={item.applicants}
-                institutes={item.institutes}
-                actions={item.actions}
-              />
-            );
-          })}
+          <div className=" flex flex-col gap-y-4">
+            {jobsApplied.map((item, index) => {
+              return (
+                <JobsAppliedItems
+                  mode={item.mode}
+                  subject={item.subjects}
+                  city={item.city}
+                  country={item.country}
+                  applicants={item.applicants}
+                  institutes={item.institutes}
+                  actions={item.actions}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </Card>
