@@ -4,45 +4,45 @@ import JobsAppliedItems from "../Components/DisplayItems/JobsAppliedItems";
 import JobsDetailsItems from "../Components/DisplayItems/JobsDetailsItems";
 import Search from "../Components/Searchbar";
 
-const jobsApplied = [
+const JobsDetailsList = [
+  {
+    studentName: "Tauseeq Babar",
+    institutes: "Asif Public School",
+    tutor: "Sajad Ullah",
+    pendingFee: "20000",
+    actions: "Remove Tutor",
+  },
+  {
+    studentName: "Tauseeq Babar",
+    institutes: "Asif Public School",
+    tutor: "Sajad Ullah",
+    pendingFee: "20000",
+    actions: "Remove Tutor",
+  },
+  {
+    studentName: "Tauseeq Babar",
+    institutes: "Asif Public School",
+    tutor: "Sajad Ullah",
+    pendingFee: "20000",
+    actions: "Remove Tutor",
+  },
+  {
+    studentName: "Tauseeq Babar",
+    institutes: "Asif Public School",
+    tutor: "Sajad Ullah",
+    pendingFee: "20000",
+    actions: "Remove Tutor",
+  },
   {
     tutor: "Sajad Ullah",
-    pendingFee: "Pakistan",
+    pendingFee: "20000",
     studentName: "Tauseeq Babar",
     institutes: "Asif Public School",
     actions: "Remove Tutor",
   },
   {
     tutor: "Sajad Ullah",
-    pendingFee: "Pakistan",
-    studentName: "Tauseeq Babar",
-    institutes: "Asif Public School",
-    actions: "Remove Tutor",
-  },
-  {
-    tutor: "Sajad Ullah",
-    pendingFee: "Pakistan",
-    studentName: "Tauseeq Babar",
-    institutes: "Asif Public School",
-    actions: "Remove Tutor",
-  },
-  {
-    tutor: "Sajad Ullah",
-    pendingFee: "Pakistan",
-    studentName: "Tauseeq Babar",
-    institutes: "Asif Public School",
-    actions: "Remove Tutor",
-  },
-  {
-    tutor: "Sajad Ullah",
-    pendingFee: "Pakistan",
-    studentName: "Tauseeq Babar",
-    institutes: "Asif Public School",
-    actions: "Remove Tutor",
-  },
-  {
-    tutor: "Sajad Ullah",
-    pendingFee: "Pakistan",
+    pendingFee: "20000",
     studentName: "Tauseeq Babar",
     institutes: "Asif Public School",
     actions: "Remove Tutor",
@@ -95,8 +95,8 @@ const JobsDetails = () => {
             </p>
             <p className="col-span-1 font-bold text-xl text-black">Actions</p>
           </header>
-          <div className="flex flex-col gap-y-6">
-            {jobsApplied.map((item) => {
+          <div className="flex flex-col gap-y-8">
+            {JobsDetailsList.map((item) => {
               return (
                 <JobsDetailsItems
                   studentName={item.studentName}
