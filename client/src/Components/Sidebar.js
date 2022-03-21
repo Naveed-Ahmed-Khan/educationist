@@ -8,7 +8,10 @@ const sidebarList = [
   { name: "Add Parents", route: "/" },
   { name: "Add Tutor", route: "/add-tutor" },
   { name: "Add Job", route: "/add-job" },
+
   { name: "All Tutors", route: "/all-tutors" },
+
+
   { name: "All Jobs", route: "/all-jobs" },
   { name: "Jobs Applied", route: "/jobs-applied" },
   { name: "Jobs Details", route: "/jobs-details" },

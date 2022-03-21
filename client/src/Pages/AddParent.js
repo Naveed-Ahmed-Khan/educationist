@@ -113,6 +113,12 @@ const AddParent = () => {
           >
             Add Parent
           </button>
+          {/* <button
+            type="submit"
+            className="flex bg-green-500 text-white rounded-lg mx-auto  px-8 py-3 md:px-10 md:py-3 md:ml-auto md:mx-0"
+          >
+            Reset
+          </button> */}
         </div>
       </form>
     </Card>

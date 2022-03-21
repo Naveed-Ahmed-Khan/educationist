@@ -1,18 +1,27 @@
 import React from "react";
+
+import { useDispatch } from "react-redux";
+
 import Card from "../Components/Card";
 import Input from "../Components/Input";
 import { useFormik } from "formik";
 
 const AddJob = () => {
+
+  const dispatch = useDispatch();
+
   const formik = useFormik({
     initialValues: {
       studentName: "",
-      fatherName: "",
-      email: "",
-      watsappNo: "",
+      applicantName: "",
+      subject: "",
+      requirment: "",
+      expectedBudget: "",
+      requiredTutor: "",
       country: "",
       city: "",
-      password: "",
+      teachingMode: "",
+
     },
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
@@ -20,79 +29,122 @@ const AddJob = () => {
   });
   return (
     <Card>
-      <h1 className="text-secondary text-2xl">Add Parent</h1>
+
+      <h1 className="text-2xl">Add Job</h1>
+
       <form
         onSubmit={formik.handleSubmit}
         className="flex flex-col flex-wrap gap-4 pt-6 md:px-14 md:gap-6"
       >
-        <div className="hidden md:flex md:gap-6">
+
+        {/* For small screen */}
+        <div className="flex flex-col gap-6 md:hidden">
           <Input
             width="full"
-            type="text"
-            name="studentName"
             label="Student Name"
+            name="studentName"
+            type="text"
             onChange={formik.handleChange}
             value={formik.values.studentName}
           />
           <Input
-            width="half"
             type="text"
             label="Applicant Name"
             name="applicantName"
             onChange={formik.handleChange}
-            value={formik.values.email}
+            value={formik.values.applicantName}
+            width="full"
+          />
+        </div>
+        {/* For medium screen and above */}
+        <div className="hidden md:flex md:gap-6">
+        <Input
+            width="full"
+            label="Student Name"
+            name="studentName"
+            type="text"
+
+            onChange={formik.handleChange}
+            value={formik.values.studentName}
+          />
+          <Input
+
+
+            type="text"
+            label="Applicant Name"
+            name="applicantName"
+            onChange={formik.handleChange}
+
+            value={formik.values.applicantName}
+            width="full"
+
           />
         </div>
         <Input
           width="full"
-          label="Subject for wich tutor is required"
-          name="subject"
+
           type="text"
+          name="subject"
+          label="Subject for which tutor is required"
           onChange={formik.handleChange}
-          value={formik.values.fatherName}
+          value={formik.values.subject}
         />
-        <Input
+        {/* <Input
           width="full"
-          label="Describe"
-          name="subject"
+          height="h-40"
           type="text"
+          name="requirment"
+          label="Describe your requirments"
           onChange={formik.handleChange}
-          value={formik.values.fatherName}
+          value={formik.values.requirment}
+        /> */}
+        <textarea 
+            className="
+            bg-slate-200 rounded-sm px-6 py-4
+            md:pl-14 md:py-4 outline-none"
+            type='text'
+            rows={5}
+            placeholder="Describe your requirment"
+            name="requirment"
+            value={formik.values.requirment}
+            onChange={formik.handleChange}
         />
-        <div className="hidden md:flex md:gap-6">
+        {/* For small screen */}
+        <div className="flex flex-col gap-6 md:hidden">
           <Input
             width="full"
-            type="text"
             label="Expected Budget"
-            name="studentName"
+            name="expectedBudget"
+            type="text"
             onChange={formik.handleChange}
-            value={formik.values.studentName}
+            value={formik.values.expectedBudget}
           />
           <Input
-            width="half"
             type="text"
-            name="applicantName"
             label="Required Tutor"
+            name="requiredTutor"
             onChange={formik.handleChange}
-            value={formik.values.email}
+            value={formik.values.requiredTutor}
+            width="full"
           />
         </div>
+        {/* For medium screen and above */}
         <div className="hidden md:flex md:gap-6">
           <Input
             width="full"
+            label="Expected Budget"
+            name="expectedBudget"
             type="text"
-            name="studentName"
-            label="Student Name"
             onChange={formik.handleChange}
-            value={formik.values.studentName}
+            value={formik.values.expectedBudget}
           />
           <Input
-            width="half"
             type="text"
-            label="Applicant Name"
-            name="applicantName"
+            label="Required Tutor"
+            name="requiredTutor"
             onChange={formik.handleChange}
-            value={formik.values.email}
+            value={formik.values.requiredTutor}
+            width="full"
           />
         </div>
 
@@ -100,71 +152,53 @@ const AddJob = () => {
         <div className="flex flex-col gap-6 md:hidden">
           <Input
             width="full"
-            label="Father Name"
-            name="fatherName"
+
+            label="City"
+            name="city"
             type="text"
             onChange={formik.handleChange}
-            value={formik.values.fatherName}
+            value={formik.values.city}
           />
           <Input
             type="text"
-            label="Email"
-            name="email"
+            label="Country"
+            name="country"
             onChange={formik.handleChange}
-            value={formik.values.email}
+            value={formik.values.country}
+
             width="full"
           />
         </div>
         {/* For medium screen and above */}
         <div className="hidden md:flex md:gap-6">
           <Input
-            width="half"
+
+            width="full"
+            label="City"
+            name="city"
             type="text"
-            label="Father Name"
-            name="fatherName"
             onChange={formik.handleChange}
-            value={formik.values.fatherName}
+            value={formik.values.city}
           />
           <Input
-            width="half"
             type="text"
-            label="Email"
-            name="email"
+            label="Country"
+            name="country"
             onChange={formik.handleChange}
-            value={formik.values.email}
+            value={formik.values.country}
+            width="full"
+
           />
         </div>
         <Input
           width="full"
-          type="number"
-          label="Watsapp No."
-          name="watsappNo"
-          onChange={formik.handleChange}
-          value={formik.values.watsappNo}
-        />
-        <Input
-          width="full"
+
           type="text"
-          label="Country"
-          name="country"
+          name="teachingMode"
+          label="Teaching Mode"
           onChange={formik.handleChange}
-          value={formik.values.country}
-        />
-        <Input
-          width="full"
-          type="text"
-          label="City"
-          name="city"
-          onChange={formik.handleChange}
-          value={formik.values.city}
-        />
-        <Input
-          width="full"
-          type="text"
-          label="Password"
-          name="password"
-          onChange={formik.handleChange}
-          value={formik.values.password}
+          value={formik.values.teachingMode}
+
         />
         <div>
           <button
@@ -173,6 +207,14 @@ const AddJob = () => {
           >
             Add Parent
           </button>
+
+          {/* <button
+            type="submit"
+            className="flex bg-green-500 text-white rounded-lg mx-auto  px-8 py-3 md:px-10 md:py-3 md:ml-auto md:mx-0"
+          >
+            Reset
+          </button> */}
+
         </div>
       </form>
     </Card>
