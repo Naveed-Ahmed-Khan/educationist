@@ -1,10 +1,13 @@
 import React from "react";
+
 import { useDispatch } from "react-redux";
+
 import Card from "../Components/Card";
 import Input from "../Components/Input";
 import { useFormik } from "formik";
 
 const AddJob = () => {
+
   const dispatch = useDispatch();
 
   const formik = useFormik({
@@ -18,6 +21,7 @@ const AddJob = () => {
       country: "",
       city: "",
       teachingMode: "",
+
     },
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
@@ -25,11 +29,14 @@ const AddJob = () => {
   });
   return (
     <Card>
+
       <h1 className="text-2xl">Add Job</h1>
+
       <form
         onSubmit={formik.handleSubmit}
         className="flex flex-col flex-wrap gap-4 pt-6 md:px-14 md:gap-6"
       >
+
         {/* For small screen */}
         <div className="flex flex-col gap-6 md:hidden">
           <Input
@@ -56,20 +63,26 @@ const AddJob = () => {
             label="Student Name"
             name="studentName"
             type="text"
+
             onChange={formik.handleChange}
             value={formik.values.studentName}
           />
           <Input
+
+
             type="text"
             label="Applicant Name"
             name="applicantName"
             onChange={formik.handleChange}
+
             value={formik.values.applicantName}
             width="full"
+
           />
         </div>
         <Input
           width="full"
+
           type="text"
           name="subject"
           label="Subject for which tutor is required"
@@ -134,10 +147,12 @@ const AddJob = () => {
             width="full"
           />
         </div>
+
         {/* For small screen */}
         <div className="flex flex-col gap-6 md:hidden">
           <Input
             width="full"
+
             label="City"
             name="city"
             type="text"
@@ -150,12 +165,14 @@ const AddJob = () => {
             name="country"
             onChange={formik.handleChange}
             value={formik.values.country}
+
             width="full"
           />
         </div>
         {/* For medium screen and above */}
         <div className="hidden md:flex md:gap-6">
           <Input
+
             width="full"
             label="City"
             name="city"
@@ -170,15 +187,18 @@ const AddJob = () => {
             onChange={formik.handleChange}
             value={formik.values.country}
             width="full"
+
           />
         </div>
         <Input
           width="full"
+
           type="text"
           name="teachingMode"
           label="Teaching Mode"
           onChange={formik.handleChange}
           value={formik.values.teachingMode}
+
         />
         <div>
           <button
@@ -187,12 +207,14 @@ const AddJob = () => {
           >
             Add Parent
           </button>
+
           {/* <button
             type="submit"
             className="flex bg-green-500 text-white rounded-lg mx-auto  px-8 py-3 md:px-10 md:py-3 md:ml-auto md:mx-0"
           >
             Reset
           </button> */}
+
         </div>
       </form>
     </Card>

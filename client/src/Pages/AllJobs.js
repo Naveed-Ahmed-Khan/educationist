@@ -58,7 +58,7 @@ const AllJobs = () => {
       {/* Header */}
       <div className="flex flex-col px-0 md:px-10">
         <div className="flex items-center justify-between">
-          <p className="text-md">All Jobs</p>
+          <p className="text-lg font-bold text-secondary">All Jobs</p>
           <svg
             className="fill-gray-400 object-contain h-10 cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
