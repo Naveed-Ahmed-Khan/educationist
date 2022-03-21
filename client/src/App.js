@@ -3,7 +3,7 @@ import Dashboard from "./Dashboard";
 import AddJob from "./Pages/AddJob";
 import AddParent from "./Pages/AddParent";
 import AddTutor from "./Pages/AddTutor";
-import AddJob from "./Pages/AddJob";
+
 import AllJobs from "./Pages/AllJobs";
 import AllTutors from "./Pages/AllTutors";
 import Feedback from "./Pages/Feedback";
@@ -26,8 +26,6 @@ function App() {
           <Route path="/jobs-applied" element={<JobsApplied />} />
           <Route path="/jobs-details" element={<JobsDetails />} />
           <Route path="/feedback" element={<Feedback />} />
-
-
         </Route>
       </Routes>
     </>

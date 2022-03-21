@@ -11,7 +11,6 @@ const sidebarList = [
 
   { name: "All Tutors", route: "/all-tutors" },
 
-
   { name: "All Jobs", route: "/all-jobs" },
   { name: "Jobs Applied", route: "/jobs-applied" },
   { name: "Jobs Details", route: "/jobs-details" },
@@ -65,7 +64,7 @@ const Sidebar = (props) => {
       </div>
 
       {/* Desktop Sidebar */}
-      <div className="hidden md:flex md:flex-col md:gap-12 md:text-3xl md:h-full md:max-w-72 md:p-12">
+      <div className="hidden md:flex md:flex-col md:gap-12 md:text-3xl md:min-h-full md:max-w-72 md:p-12">
         <div className="flex flex-col gap-2">
           <div className="flex flex-col items-start justify-start gap-4">
             <img src={profile} alt="pic" className="rounded-xl" />
