@@ -9,9 +9,18 @@ const JobsDetailsItems = (props) => {
         <div className="col-span-1 text-primary">{props.institutes}</div>
         <div className="col-span-1 text-primary">
           <div className="mb-2">Rs. {props.pendingFee}</div>
-          <div className="text-black">{"Send Reminder"}</div>
+          <button
+            className="text-black text-sm py-[6px] px-[12px] rounded-md border border-black"
+            onClick={() => {
+              alert("Reminder Sent!");
+            }}
+          >
+            Send Reminder
+          </button>
         </div>
-        <div className="col-span-1 text-primary">{props.actions}</div>
+        <button className="col-span-1 bg-primary text-white text-sm py-[6px] px-[12px] rounded-md">
+          Remove Tutor
+        </button>
       </div>
     </>
   );

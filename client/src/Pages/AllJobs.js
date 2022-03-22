@@ -1,46 +1,8 @@
 import React from "react";
 import Card from "../Components/Card";
 import AllJobsItems from "../Components/DisplayItems/AllJobsItems";
+import { jobs } from "../Components/DummyData/jobs";
 import Search from "../Components/Searchbar";
-
-const jobs = [
-  {
-    mode: "Online",
-    subjects: "Maths",
-    city: "Rawalpindi",
-    country: "Pakistan",
-  },
-  {
-    mode: "Online",
-    subjects: "Maths",
-    city: "Rawalpindi",
-    country: "Pakistan",
-  },
-  {
-    mode: "Online",
-    subjects: "Maths",
-    city: "Rawalpindi",
-    country: "Pakistan",
-  },
-  {
-    mode: "Online",
-    subjects: "Maths",
-    city: "Rawalpindi",
-    country: "Pakistan",
-  },
-  {
-    mode: "Online",
-    subjects: "Maths",
-    city: "Rawalpindi",
-    country: "Pakistan",
-  },
-  {
-    mode: "Online",
-    subjects: "Maths",
-    city: "Rawalpindi",
-    country: "Pakistan",
-  },
-];
 
 const AllJobs = () => {
   const date = new Date();

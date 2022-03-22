@@ -13,9 +13,15 @@ const AllJobsItems = (props) => {
         </div>
         <div className="flex ">
           <div className="flex justify-around gap-2 md:gap-10">
-            <p className="text-primary">View</p>
-            <p className="text-primary">Edit</p>
-            <p className="text-red-500">Delete</p>
+            <button className="bg-primary text-white text-sm py-[6px] px-[12px] rounded-md">
+              View
+            </button>
+            <button className="bg-primary text-white text-sm py-[6px] px-[12px] rounded-md">
+              Edit
+            </button>
+            <button className=" text-red-500 text-sm py-[6px] px-[12px] rounded-md border border-red-500">
+              Delete
+            </button>
           </div>
         </div>
       </div>

@@ -1,40 +1,11 @@
 import React from "react";
 import Card from "../Components/Card";
 import AllTutorsItems from "../Components/DisplayItems/AllTutorsItems";
-import profile2 from "../Assets/Images/profile2.png";
+
 import Search from "../Components/Searchbar";
+import { tutors } from "../Components/DummyData/tutors";
 
 const AllTutors = () => {
-  const tutors = [
-    {
-      tutor: "Tauseeq Babar",
-      img: profile2,
-    },
-    {
-      tutor: "Tauseeq Babar",
-      img: profile2,
-    },
-    {
-      tutor: "Tauseeq Babar",
-      img: profile2,
-    },
-    {
-      tutor: "Tauseeq Babar",
-      img: profile2,
-    },
-    {
-      tutor: "Tauseeq Babar",
-      img: profile2,
-    },
-    {
-      tutor: "Tauseeq Babar",
-      img: profile2,
-    },
-    {
-      tutor: "Tauseeq Babar",
-      img: profile2,
-    },
-  ];
   const date = new Date();
   const currentDate = `${date.getDate()} / ${date.getMonth()} / ${date.getFullYear()}`;
   return (

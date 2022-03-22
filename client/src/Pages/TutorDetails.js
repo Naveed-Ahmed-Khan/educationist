@@ -3,10 +3,13 @@ import { useDispatch } from "react-redux";
 import Card from "../Components/Card";
 import Input from "../Components/Input";
 import { useFormik } from "formik";
+import profile2 from "../Assets/Images/profile2.png";
+import { tutors } from "../Components/DummyData/tutors";
+import { useNavigate } from "react-router-dom";
 
 const TutorDetails = () => {
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       highestQual: "",
@@ -17,12 +20,14 @@ const TutorDetails = () => {
       experience: "",
     },
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      /* alert(JSON.stringify(values, null, 2)); */
+      alert("Tutor Added!");
+      navigate("/all-tutors");
     },
   });
   return (
     <Card>
-      <h1 className="text-2xl">Add Parent</h1>
+      <h1 className="text-2xl">Tutor Details</h1>
       <form
         onSubmit={formik.handleSubmit}
         className="flex flex-col flex-wrap gap-4 pt-6 md:px-14 md:gap-6"

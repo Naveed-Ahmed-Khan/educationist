@@ -18,7 +18,8 @@ const AddParent = () => {
       password: "",
     },
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      /* alert(JSON.stringify(values, null, 2)); */
+      alert("Parent Added!");
     },
   });
   return (
@@ -106,6 +107,7 @@ const AddParent = () => {
           onChange={formik.handleChange}
           value={formik.values.password}
         />
+        <input type="file" name="" id="" />
         <div>
           <button
             type="submit"

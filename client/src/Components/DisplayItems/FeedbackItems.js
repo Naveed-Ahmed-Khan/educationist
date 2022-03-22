@@ -7,8 +7,12 @@ const FeedbackItems = (props) => {
         <div className="col-span-1 text-primary">{props.studentName}</div>
         <div className="col-span-1 text-primary">{props.tutor}</div>
         <div className="col-span-1 text-primary">{props.institutes}</div>
-        <div className="col-span-1 text-primary">{"View"}</div>
-        <div className="col-span-1 text-primary">{"View"}</div>
+        <button className="col-span-1 bg-primary text-white text-sm py-[6px] px-[12px] rounded-md">
+          View
+        </button>
+        <button className="col-span-1 bg-primary text-white text-sm py-[6px] px-[12px] rounded-md">
+          View
+        </button>
       </div>
     </>
   );

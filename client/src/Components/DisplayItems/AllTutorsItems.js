@@ -1,9 +1,11 @@
 import React from "react";
+import profile2 from "../../Assets/Images/profile2.png";
+import { tutors } from "../DummyData/tutors";
 
 const AllTutorsItems = (props) => {
   return (
     <>
-      <div className="grid grid-cols-12 place-items-center gap-x-4 text-center">
+      <div className="grid grid-cols-12 place-items-center text-center">
         <div className="col-span-6 flex gap-4 place-self-start text-left font-semibold text-primary">
           <div className="grid place-items-center">
             <img
@@ -24,14 +26,23 @@ const AllTutorsItems = (props) => {
             </div>
           </div>
         </div>
-        <div className="col-span-2 font-semibold text-red-500">
-          {"Blacklist"}
-        </div>
-        <div className="col-span-2 font-semibold text-primary">
-          {"Add Details"}
-        </div>
-        <div className="col-span-1 font-semibold text-primary">{"Edit"}</div>
-        <div className="col-span-1 font-semibold text-primary">{"Delete"}</div>
+        <button
+          className="col-span-2 text-red-500 text-sm py-[6px] px-[12px] rounded-md border border-red-500"
+          onClick={() => {
+            alert("Tutor Blacklisted!");
+          }}
+        >
+          Blacklist
+        </button>
+        <button className="col-span-2  bg-primary text-white text-sm py-[6px] px-[12px] rounded-md">
+          Add Details
+        </button>
+        <button className="col-span-1 bg-primary text-white text-sm py-[6px] px-[12px] rounded-md">
+          Edit
+        </button>
+        <button className="col-span-1 bg-primary text-white text-sm py-[6px] px-[12px] rounded-md">
+          Delete
+        </button>
       </div>
     </>
   );

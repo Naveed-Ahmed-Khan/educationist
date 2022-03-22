@@ -1,64 +1,8 @@
 import React from "react";
 import Card from "../Components/Card";
 import JobsAppliedItems from "../Components/DisplayItems/JobsAppliedItems";
+import { jobsApplied } from "../Components/DummyData/jobs";
 import Search from "../Components/Searchbar";
-
-const jobsApplied = [
-  {
-    mode: "Online",
-    subjects: "Maths",
-    city: "Rawalpindi",
-    country: "Pakistan",
-    applicants: "Tauseeq Babar",
-    institutes: "Asif Public School",
-    actions: "Assign Parent",
-  },
-  {
-    mode: "Online",
-    subjects: "Maths",
-    city: "Rawalpindi",
-    country: "Pakistan",
-    applicants: "Tauseeq Babar",
-    institutes: "Asif Public School",
-    actions: "Assign Parent",
-  },
-  {
-    mode: "Online",
-    subjects: "Maths",
-    city: "Rawalpindi",
-    country: "Pakistan",
-    applicants: "Tauseeq Babar",
-    institutes: "Asif Public School",
-    actions: "Assign Parent",
-  },
-  {
-    mode: "Online",
-    subjects: "Maths",
-    city: "Rawalpindi",
-    country: "Pakistan",
-    applicants: "Tauseeq Babar",
-    institutes: "Asif Public School",
-    actions: "Assign Parent",
-  },
-  {
-    mode: "Online",
-    subjects: "Maths",
-    city: "Rawalpindi",
-    country: "Pakistan",
-    applicants: "Tauseeq Babar",
-    institutes: "Asif Public School",
-    actions: "Assign Parent",
-  },
-  {
-    mode: "Online",
-    subjects: "Maths",
-    city: "Rawalpindi",
-    country: "Pakistan",
-    applicants: "Tauseeq Babar",
-    institutes: "Asif Public School",
-    actions: "Assign Parent",
-  },
-];
 
 const JobsApplied = () => {
   const date = new Date();

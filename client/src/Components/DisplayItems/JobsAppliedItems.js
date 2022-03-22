@@ -13,7 +13,14 @@ const JobsAppliedItems = (props) => {
         </div>
         <div className="col-span-1 text-primary">{props.applicants}</div>
         <div className="col-span-1 text-primary">{props.institutes}</div>
-        <div className="col-span-1 text-primary">{props.actions}</div>
+        <button
+          className="col-span-1 bg-primary text-white text-sm py-[6px] px-[12px] rounded-md"
+          onClick={() => {
+            alert("Parent Assigned!");
+          }}
+        >
+          Assign Parent
+        </button>
       </div>
     </>
   );
